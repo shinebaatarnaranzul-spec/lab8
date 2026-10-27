@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="mn" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фото Цомог - Tailwind CSS</title>
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+
+  <!-- Navbar -->
+  <nav class="border-b border-gray-200 dark:border-gray-800 bg-gray-50/80 dark:bg-gray-900/80 backdrop-blur sticky top-0 z-50 py-3">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+      <a href="#" class="text-lg font-bold">📸 Миний Фото Цомог (TW)</a>
+      <div class="flex items-center gap-6">
+        <div class="hidden md:flex items-center gap-4 text-sm font-medium text-gray-600 dark:text-gray-300">
+          <a href="#" class="hover:text-brand">Нүүр</a>
+          <a href="#gallery" class="hover:text-brand">Цомог</a>
+          <a href="#contact" class="hover:text-brand">Холбоо барих</a>
+        </div>
+        <button id="themeToggleTw" class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-lg text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition">🌙 Dark Mode</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="py-12 text-center max-w-2xl mx-auto px-4">
+    <h1 class="text-3xl font-extrabold tracking-tight mb-3">Лаб 8 - Tailwind CSS v4 Хувилбар</h1>
+    <p class="text-gray-600 dark:text-gray-400 text-sm">@tailwindcss/cli ашиглан build хийж, `@theme` болон `@custom-variant`-ийг бүрэн тохируулав.</p>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 mb-16" id="gallery">
+    
+    <!-- 3 Баганатай Card Grid -->
+    <h2 class="text-xl font-bold mb-6 border-l-4 border-brand ps-3">Цомгийн зургууд</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <!-- Card 1 -->
+      <div class="border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden shadow-sm bg-white dark:bg-gray-900 flex flex-col justify-between">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Зураг 1" class="w-full h-56 object-cover">
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h5 class="font-semibold text-lg mb-2">Байгалийн үзэсгэлэн</h5>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Далайн эрэг дээрх наран жаргах мөч болон тайван орчныг харуулсан кадр.</p>
+          </div>
+          <button class="w-full bg-brand hover:bg-brand-hover text-white py-2 rounded-lg text-sm font-medium transition">Дэлгэрэнгүй үзэх</button>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden shadow-sm bg-white dark:bg-gray-900 flex flex-col justify-between">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=80" alt="Зураг 2" class="w-full h-56 object-cover">
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h5 class="font-semibold text-lg mb-2">Уул нуруудын аялал</h5>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Өндөр уулсын оргил өөд тэмүүлсэн сонирхолтой аяллын дурсамж.</p>
+          </div>
+          <button class="w-full bg-brand hover:bg-brand-hover text-white py-2 rounded-lg text-sm font-medium transition">Дэлгэрэнгүй үзэх</button>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden shadow-sm bg-white dark:bg-gray-900 flex flex-col justify-between">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" alt="Зураг 3" class="w-full h-56 object-cover">
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h5 class="font-semibold text-lg mb-2">Шөнийн тэнгэр</h5>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Оддын гэрэл болон хотын шөнийн гэрэлтүүлэг хосолсон гайхалтай үзэмж.</p>
+          </div>
+          <button class="w-full bg-brand hover:bg-brand-hover text-white py-2 rounded-lg text-sm font-medium transition">Дэлгэрэнгүй үзэх</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Validation Section -->
+    <section id="contact" class="max-w-lg mx-auto bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm">
+      <h2 class="text-xl font-bold mb-4">Зураг нэмэх / Санал хүсэлт</h2>
+      <form id="twForm" class="space-y-4" novalidate>
+        <div>
+          <label for="twName" class="block text-sm font-medium mb-1">Таны нэр</label>
+          <input type="text" id="twName" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-brand">
+          <p id="nameError" class="text-red-500 text-xs mt-1 hidden">Нэрээ оруулна уу.</p>
+        </div>
+
+        <div>
+          <label for="twEmail" class="block text-sm font-medium mb-1">И-мэйл хаяг</label>
+          <input type="email" id="twEmail" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-brand">
+          <p id="emailError" class="text-red-500 text-xs mt-1 hidden">Хүчинтэй и-мэйл хаяг оруулна уу.</p>
+        </div>
+
+        <button type="submit" class="w-full bg-brand hover:bg-brand-hover text-white py-2 rounded-lg text-sm font-medium transition">Мэдээлэл илгээх</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    // Dark mode toggle шилжүүлэгч
+    const toggleBtn = document.getElementById('themeToggleTw');
+    const htmlEl = document.documentElement;
+    toggleBtn.addEventListener('click', () => {
+      htmlEl.classList.toggle('dark');
+      const isDark = htmlEl.classList.contains('dark');
+      toggleBtn.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+
+    // Form Validation Logic
+    const form = document.getElementById('twForm');
+    const nameInput = document.getElementById('twName');
+    const emailInput = document.getElementById('twEmail');
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let isValid = true;
+
+      if (!nameInput.value.trim()) {
+        nameError.classList.remove('hidden');
+        isValid = false;
+      } else {
+        nameError.classList.add('hidden');
+      }
+
+      if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
+        emailError.classList.remove('hidden');
+        isValid = false;
+      } else {
+        emailError.classList.add('hidden');
+      }
+
+      if (isValid) {
+        alert('Амжилттай илгээгдлээ!');
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
